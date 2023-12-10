@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/CMakeFiles/zmq-populate"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/CMakeFiles/zmq-populate.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/CMakeFiles/zmq-populate-complete.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-build.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-configure.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-download.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-install.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-patch.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-test.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"zmq-populate"
+		],
+		"name" : "zmq-populate"
+	}
+}

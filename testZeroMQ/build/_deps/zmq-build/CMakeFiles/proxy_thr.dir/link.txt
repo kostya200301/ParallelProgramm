@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=gnu++11 -Wno-tautological-constant-compare -O3 -DNDEBUG -rdynamic CMakeFiles/proxy_thr.dir/perf/proxy_thr.cpp.o -o bin/proxy_thr  -Wl,-rpath,/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-build/lib:/usr/local/lib: lib/libzmq.so.5.2.4 -lbsd /usr/local/lib/libsodium.so -lrt 

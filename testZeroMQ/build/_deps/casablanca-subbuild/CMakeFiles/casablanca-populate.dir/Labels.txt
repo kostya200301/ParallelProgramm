@@ -1,0 +1,14 @@
+# Target labels
+ casablanca-populate
+# Source files and their labels
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/CMakeFiles/casablanca-populate
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/CMakeFiles/casablanca-populate.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/CMakeFiles/casablanca-populate-complete.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-build.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-configure.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-download.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-install.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-mkdir.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-patch.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-test.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-update.rule

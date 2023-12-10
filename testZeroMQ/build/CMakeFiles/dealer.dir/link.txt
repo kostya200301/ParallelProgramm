@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/dealer.dir/dealer.cpp.o CMakeFiles/dealer.dir/RestServer.cpp.o -o dealer  -Wl,-rpath,/usr/local/lib _deps/zeromq-build/lib/libzmq.a /usr/lib/x86_64-linux-gnu/libcpprest.so.2.10 -lssl -lcrypto -lbsd /usr/local/lib/libsodium.so -lrt 

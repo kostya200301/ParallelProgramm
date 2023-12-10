@@ -1,0 +1,14 @@
+# Target labels
+ zmq-populate
+# Source files and their labels
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/CMakeFiles/zmq-populate
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/CMakeFiles/zmq-populate.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/CMakeFiles/zmq-populate-complete.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-build.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-configure.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-download.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-install.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-mkdir.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-patch.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-test.rule
+/home/kostya/Desktop/g5/testZeroMQ/build/_deps/zmq-subbuild/zmq-populate-prefix/src/zmq-populate-stamp/zmq-populate-update.rule

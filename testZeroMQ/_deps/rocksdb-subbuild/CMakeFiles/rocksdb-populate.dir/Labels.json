@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/CMakeFiles/rocksdb-populate"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/CMakeFiles/rocksdb-populate.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/CMakeFiles/rocksdb-populate-complete.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-build.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-configure.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-download.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-install.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-patch.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-test.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"rocksdb-populate"
+		],
+		"name" : "rocksdb-populate"
+	}
+}

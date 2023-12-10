@@ -1,0 +1,14 @@
+# Target labels
+ rocksdb-populate
+# Source files and their labels
+/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/CMakeFiles/rocksdb-populate
+/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/CMakeFiles/rocksdb-populate.rule
+/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/CMakeFiles/rocksdb-populate-complete.rule
+/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-build.rule
+/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-configure.rule
+/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-download.rule
+/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-install.rule
+/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-mkdir.rule
+/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-patch.rule
+/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-test.rule
+/home/kostya/Desktop/g5/testZeroMQ/_deps/rocksdb-subbuild/rocksdb-populate-prefix/src/rocksdb-populate-stamp/rocksdb-populate-update.rule

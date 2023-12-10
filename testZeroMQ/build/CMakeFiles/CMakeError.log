@@ -1,0 +1,464 @@
+Determining if the strlcpy exist failed with the following output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_abb71/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_abb71.dir/build.make CMakeFiles/cmTC_abb71.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building CXX object CMakeFiles/cmTC_abb71.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -std=gnu++11 -Wno-tautological-constant-compare  -o CMakeFiles/cmTC_abb71.dir/CheckSymbolExists.cxx.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘strlcpy’ was not declared in this scope; did you mean ‘strncpy’?
+    8 |   return ((int*)(&strlcpy))[argc];
+      |                   ^~~~~~~
+      |                   strncpy
+At global scope:
+cc1plus: note: unrecognized command-line option ‘-Wno-tautological-constant-compare’ may have been intended to silence earlier diagnostics
+gmake[1]: *** [CMakeFiles/cmTC_abb71.dir/build.make:78: CMakeFiles/cmTC_abb71.dir/CheckSymbolExists.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_abb71/fast] Error 2
+
+
+File /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strlcpy
+  return ((int*)(&strlcpy))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the kqueue exist failed with the following output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f2cbb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f2cbb.dir/build.make CMakeFiles/cmTC_f2cbb.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building CXX object CMakeFiles/cmTC_f2cbb.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -std=gnu++11 -Wno-tautological-constant-compare  -o CMakeFiles/cmTC_f2cbb.dir/CheckSymbolExists.cxx.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:2:10: fatal error: sys/event.h: No such file or directory
+    2 | #include <sys/event.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_f2cbb.dir/build.make:78: CMakeFiles/cmTC_f2cbb.dir/CheckSymbolExists.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f2cbb/fast] Error 2
+
+
+File /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <sys/event.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef kqueue
+  return ((int*)(&kqueue))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if files windows.h exist failed with the following output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_59891/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_59891.dir/build.make CMakeFiles/cmTC_59891.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building C object CMakeFiles/cmTC_59891.dir/ZMQ_HAVE_WINDOWS.c.o
+/usr/bin/cc   -std=gnu11 -Wno-tautological-constant-compare  -o CMakeFiles/cmTC_59891.dir/ZMQ_HAVE_WINDOWS.c.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CheckIncludeFiles/ZMQ_HAVE_WINDOWS.c
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CheckIncludeFiles/ZMQ_HAVE_WINDOWS.c:2:10: fatal error: windows.h: No such file or directory
+    2 | #include <windows.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_59891.dir/build.make:78: CMakeFiles/cmTC_59891.dir/ZMQ_HAVE_WINDOWS.c.o] Error 1
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_59891/fast] Error 2
+
+
+Source:
+/* */
+#include <windows.h>
+
+
+int main(void){return 0;}
+
+Determining if the LOCAL_PEERCRED exist failed with the following output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_97f13/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_97f13.dir/build.make CMakeFiles/cmTC_97f13.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building CXX object CMakeFiles/cmTC_97f13.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -std=gnu++11 -Wno-tautological-constant-compare  -o CMakeFiles/cmTC_97f13.dir/CheckSymbolExists.cxx.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘LOCAL_PEERCRED’ was not declared in this scope; did you mean ‘SO_PEERCRED’?
+    8 |   return ((int*)(&LOCAL_PEERCRED))[argc];
+      |                   ^~~~~~~~~~~~~~
+      |                   SO_PEERCRED
+At global scope:
+cc1plus: note: unrecognized command-line option ‘-Wno-tautological-constant-compare’ may have been intended to silence earlier diagnostics
+gmake[1]: *** [CMakeFiles/cmTC_97f13.dir/build.make:78: CMakeFiles/cmTC_97f13.dir/CheckSymbolExists.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_97f13/fast] Error 2
+
+
+File /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <sys/socket.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef LOCAL_PEERCRED
+  return ((int*)(&LOCAL_PEERCRED))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the gethrtime exist failed with the following output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e31ff/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e31ff.dir/build.make CMakeFiles/cmTC_e31ff.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building CXX object CMakeFiles/cmTC_e31ff.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -std=gnu++11 -Wno-tautological-constant-compare  -o CMakeFiles/cmTC_e31ff.dir/CheckSymbolExists.cxx.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘gethrtime’ was not declared in this scope; did you mean ‘getitimer’?
+    8 |   return ((int*)(&gethrtime))[argc];
+      |                   ^~~~~~~~~
+      |                   getitimer
+At global scope:
+cc1plus: note: unrecognized command-line option ‘-Wno-tautological-constant-compare’ may have been intended to silence earlier diagnostics
+gmake[1]: *** [CMakeFiles/cmTC_e31ff.dir/build.make:78: CMakeFiles/cmTC_e31ff.dir/CheckSymbolExists.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_e31ff/fast] Error 2
+
+
+File /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <sys/time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef gethrtime
+  return ((int*)(&gethrtime))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C++ SOURCE FILE Test HAVE_FLAG_-Wall failed with the following output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_54d98/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_54d98.dir/build.make CMakeFiles/cmTC_54d98.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building CXX object CMakeFiles/cmTC_54d98.dir/src.cxx.o
+/usr/bin/c++   -std=gnu++11 -Wno-tautological-constant-compare    -DHAVE_FLAG_-Wall -Wall -o CMakeFiles/cmTC_54d98.dir/src.cxx.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.cxx
+<command-line>: warning: ISO C++11 requires whitespace after the macro name
+cc1plus: note: unrecognized command-line option '-Wno-tautological-constant-compare' may have been intended to silence earlier diagnostics
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Linking CXX executable cmTC_54d98
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54d98.dir/link.txt --verbose=1
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+/usr/bin/c++  -std=gnu++11 -Wno-tautological-constant-compare  -rdynamic CMakeFiles/cmTC_54d98.dir/src.cxx.o -o cmTC_54d98 
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_FLAG_-Wextra failed with the following output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_cd738/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cd738.dir/build.make CMakeFiles/cmTC_cd738.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building CXX object CMakeFiles/cmTC_cd738.dir/src.cxx.o
+/usr/bin/c++   -std=gnu++11 -Wno-tautological-constant-compare    -DHAVE_FLAG_-Wextra -Wextra -o CMakeFiles/cmTC_cd738.dir/src.cxx.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.cxx
+<command-line>: warning: ISO C++11 requires whitespace after the macro name
+cc1plus: note: unrecognized command-line option '-Wno-tautological-constant-compare' may have been intended to silence earlier diagnostics
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Linking CXX executable cmTC_cd738
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd738.dir/link.txt --verbose=1
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+/usr/bin/c++  -std=gnu++11 -Wno-tautological-constant-compare  -rdynamic CMakeFiles/cmTC_cd738.dir/src.cxx.o -o cmTC_cd738 
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_FLAG_-Wno-long-long failed with the following output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4bc67/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4bc67.dir/build.make CMakeFiles/cmTC_4bc67.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building CXX object CMakeFiles/cmTC_4bc67.dir/src.cxx.o
+/usr/bin/c++   -std=gnu++11 -Wno-tautological-constant-compare    -DHAVE_FLAG_-Wno-long-long -Wno-long-long -o CMakeFiles/cmTC_4bc67.dir/src.cxx.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.cxx
+<command-line>: warning: ISO C++11 requires whitespace after the macro name
+cc1plus: note: unrecognized command-line option '-Wno-tautological-constant-compare' may have been intended to silence earlier diagnostics
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Linking CXX executable cmTC_4bc67
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4bc67.dir/link.txt --verbose=1
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+/usr/bin/c++  -std=gnu++11 -Wno-tautological-constant-compare  -rdynamic CMakeFiles/cmTC_4bc67.dir/src.cxx.o -o cmTC_4bc67 
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_FLAG_-Wno-uninitialized failed with the following output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6944a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6944a.dir/build.make CMakeFiles/cmTC_6944a.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building CXX object CMakeFiles/cmTC_6944a.dir/src.cxx.o
+/usr/bin/c++   -std=gnu++11 -Wno-tautological-constant-compare    -DHAVE_FLAG_-Wno-uninitialized -Wno-uninitialized -o CMakeFiles/cmTC_6944a.dir/src.cxx.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.cxx
+<command-line>: warning: ISO C++11 requires whitespace after the macro name
+cc1plus: note: unrecognized command-line option '-Wno-tautological-constant-compare' may have been intended to silence earlier diagnostics
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Linking CXX executable cmTC_6944a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6944a.dir/link.txt --verbose=1
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+/usr/bin/c++  -std=gnu++11 -Wno-tautological-constant-compare  -rdynamic CMakeFiles/cmTC_6944a.dir/src.cxx.o -o cmTC_6944a 
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_FLAG_-pedantic failed with the following output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0ddeb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0ddeb.dir/build.make CMakeFiles/cmTC_0ddeb.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building CXX object CMakeFiles/cmTC_0ddeb.dir/src.cxx.o
+/usr/bin/c++   -std=gnu++11 -Wno-tautological-constant-compare    -DHAVE_FLAG_-pedantic -pedantic -o CMakeFiles/cmTC_0ddeb.dir/src.cxx.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.cxx
+<command-line>: warning: ISO C++11 requires whitespace after the macro name
+cc1plus: note: unrecognized command-line option '-Wno-tautological-constant-compare' may have been intended to silence earlier diagnostics
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Linking CXX executable cmTC_0ddeb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ddeb.dir/link.txt --verbose=1
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+/usr/bin/c++  -std=gnu++11 -Wno-tautological-constant-compare  -rdynamic CMakeFiles/cmTC_0ddeb.dir/src.cxx.o -o cmTC_0ddeb 
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test ZMQ_HAVE_TCP_KEEPALIVE failed with the following compile output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7fdeb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7fdeb.dir/build.make CMakeFiles/cmTC_7fdeb.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building C object CMakeFiles/cmTC_7fdeb.dir/src.c.o
+/usr/bin/cc -DZMQ_HAVE_TCP_KEEPALIVE  -std=gnu11 -Wno-tautological-constant-compare  -o CMakeFiles/cmTC_7fdeb.dir/src.c.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c:13:42: error: ‘TCP_KEEPALIVE’ undeclared (first use in this function); did you mean ‘SO_KEEPALIVE’?
+   13 |        ((rc = setsockopt(s, IPPROTO_TCP, TCP_KEEPALIVE,(char*) &opt, sizeof(int))) == -1)
+      |                                          ^~~~~~~~~~~~~
+      |                                          SO_KEEPALIVE
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c:13:42: note: each undeclared identifier is reported only once for each function it appears in
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-tautological-constant-compare’ may have been intended to silence earlier diagnostics
+gmake[1]: *** [CMakeFiles/cmTC_7fdeb.dir/build.make:78: CMakeFiles/cmTC_7fdeb.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_7fdeb/fast] Error 2
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+
+int main(int argc, char *argv [])
+{
+    int s, rc, opt = 1;
+    return(
+       ((s = socket(PF_INET, SOCK_STREAM, 0)) == -1) ||
+       ((rc = setsockopt(s, SOL_SOCKET, SO_KEEPALIVE,(char*) &opt, sizeof(int))) == -1) ||
+       ((rc = setsockopt(s, IPPROTO_TCP, TCP_KEEPALIVE,(char*) &opt, sizeof(int))) == -1)
+    );
+}
+
+Performing C SOURCE FILE Test ZMQ_HAVE_PTHREAD_SETNAME_1 failed with the following compile output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_dd841/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_dd841.dir/build.make CMakeFiles/cmTC_dd841.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building C object CMakeFiles/cmTC_dd841.dir/src.c.o
+/usr/bin/cc -DZMQ_HAVE_PTHREAD_SETNAME_1  -std=gnu11 -Wno-tautological-constant-compare -D_GNU_SOURCE -Werror -pthread -o CMakeFiles/cmTC_dd841.dir/src.c.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c:6:25: error: passing argument 1 of ‘pthread_setname_np’ makes integer from pointer without a cast [-Werror=int-conversion]
+    6 |     pthread_setname_np ("foo");
+      |                         ^~~~~
+      |                         |
+      |                         char *
+In file included from /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c:2:
+/usr/include/pthread.h:463:42: note: expected ‘pthread_t’ {aka ‘long unsigned int’} but argument is of type ‘char *’
+  463 | extern int pthread_setname_np (pthread_t __target_thread, const char *__name)
+      |                                ~~~~~~~~~~^~~~~~~~~~~~~~~
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c:6:5: error: too few arguments to function ‘pthread_setname_np’
+    6 |     pthread_setname_np ("foo");
+      |     ^~~~~~~~~~~~~~~~~~
+In file included from /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c:2:
+/usr/include/pthread.h:463:12: note: declared here
+  463 | extern int pthread_setname_np (pthread_t __target_thread, const char *__name)
+      |            ^~~~~~~~~~~~~~~~~~
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-tautological-constant-compare’ may have been intended to silence earlier diagnostics
+cc1: all warnings being treated as errors
+gmake[1]: *** [CMakeFiles/cmTC_dd841.dir/build.make:78: CMakeFiles/cmTC_dd841.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_dd841/fast] Error 2
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+#include <pthread.h>
+
+int main(int argc, char *argv [])
+{
+    pthread_setname_np ("foo");
+    return 0;
+}
+
+Performing C SOURCE FILE Test ZMQ_HAVE_PTHREAD_SETNAME_3 failed with the following compile output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_73fe2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_73fe2.dir/build.make CMakeFiles/cmTC_73fe2.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building C object CMakeFiles/cmTC_73fe2.dir/src.c.o
+/usr/bin/cc -DZMQ_HAVE_PTHREAD_SETNAME_3  -std=gnu11 -Wno-tautological-constant-compare -D_GNU_SOURCE -Werror -pthread -o CMakeFiles/cmTC_73fe2.dir/src.c.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c:6:5: error: too many arguments to function ‘pthread_setname_np’
+    6 |     pthread_setname_np (pthread_self(), "foo", (void *)0);
+      |     ^~~~~~~~~~~~~~~~~~
+In file included from /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c:2:
+/usr/include/pthread.h:463:12: note: declared here
+  463 | extern int pthread_setname_np (pthread_t __target_thread, const char *__name)
+      |            ^~~~~~~~~~~~~~~~~~
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-tautological-constant-compare’ may have been intended to silence earlier diagnostics
+gmake[1]: *** [CMakeFiles/cmTC_73fe2.dir/build.make:78: CMakeFiles/cmTC_73fe2.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_73fe2/fast] Error 2
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+#include <pthread.h>
+
+int main(int argc, char *argv [])
+{
+    pthread_setname_np (pthread_self(), "foo", (void *)0);
+    return 0;
+}
+
+Performing C SOURCE FILE Test ZMQ_HAVE_PTHREAD_SET_NAME failed with the following compile output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f2ca4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f2ca4.dir/build.make CMakeFiles/cmTC_f2ca4.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building C object CMakeFiles/cmTC_f2ca4.dir/src.c.o
+/usr/bin/cc -DZMQ_HAVE_PTHREAD_SET_NAME  -std=gnu11 -Wno-tautological-constant-compare -D_GNU_SOURCE -Werror -pthread -o CMakeFiles/cmTC_f2ca4.dir/src.c.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c:6:5: error: implicit declaration of function ‘pthread_set_name_np’; did you mean ‘pthread_setname_np’? [-Werror=implicit-function-declaration]
+    6 |     pthread_set_name_np (pthread_self(), "foo");
+      |     ^~~~~~~~~~~~~~~~~~~
+      |     pthread_setname_np
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-tautological-constant-compare’ may have been intended to silence earlier diagnostics
+cc1: all warnings being treated as errors
+gmake[1]: *** [CMakeFiles/cmTC_f2ca4.dir/build.make:78: CMakeFiles/cmTC_f2ca4.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f2ca4/fast] Error 2
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+#include <pthread.h>
+
+int main(int argc, char *argv [])
+{
+    pthread_set_name_np (pthread_self(), "foo");
+    return 0;
+}
+
+Determining if files xlocale.h exist failed with the following output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ab05a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ab05a.dir/build.make CMakeFiles/cmTC_ab05a.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building C object CMakeFiles/cmTC_ab05a.dir/HAVE_XLOCALE_H.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_ab05a.dir/HAVE_XLOCALE_H.c.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CheckIncludeFiles/HAVE_XLOCALE_H.c
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CheckIncludeFiles/HAVE_XLOCALE_H.c:2:10: fatal error: xlocale.h: No such file or directory
+    2 | #include <xlocale.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_ab05a.dir/build.make:78: CMakeFiles/cmTC_ab05a.dir/HAVE_XLOCALE_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_ab05a/fast] Error 2
+
+
+Source:
+/* */
+#include <xlocale.h>
+
+
+int main(void){return 0;}
+
+Performing C++ SOURCE FILE Test _SSL_LEAK_SUPPRESS_AVAILABLE failed with the following output:
+Change Dir: /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a81b4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a81b4.dir/build.make CMakeFiles/cmTC_a81b4.dir/build
+gmake[1]: Entering directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake: /usr/local/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+Building CXX object CMakeFiles/cmTC_a81b4.dir/src.cxx.o
+/usr/bin/c++ -D_SSL_LEAK_SUPPRESS_AVAILABLE  -std=c++11 -fno-strict-aliasing  -o CMakeFiles/cmTC_a81b4.dir/src.cxx.o -c /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.cxx
+In file included from /home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.cxx:2:
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp/src.cxx:5:9: error: expected id-expression before ‘while’
+    5 |       ::SSL_COMP_free_compression_methods();
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_a81b4.dir/build.make:78: CMakeFiles/cmTC_a81b4.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/kostya/Desktop/g5/testZeroMQ/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_a81b4/fast] Error 2
+
+
+Source file was:
+
+      #include <openssl/ssl.h>
+      int main()
+      {
+      ::SSL_COMP_free_compression_methods();
+      }
+    

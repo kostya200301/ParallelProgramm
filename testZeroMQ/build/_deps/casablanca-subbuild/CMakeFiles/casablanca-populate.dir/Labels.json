@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/CMakeFiles/casablanca-populate"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/CMakeFiles/casablanca-populate.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/CMakeFiles/casablanca-populate-complete.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-build.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-configure.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-download.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-install.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-patch.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-test.rule"
+		},
+		{
+			"file" : "/home/kostya/Desktop/g5/testZeroMQ/build/_deps/casablanca-subbuild/casablanca-populate-prefix/src/casablanca-populate-stamp/casablanca-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"casablanca-populate"
+		],
+		"name" : "casablanca-populate"
+	}
+}
