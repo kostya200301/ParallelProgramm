@@ -13,19 +13,23 @@ using namespace std;
 
 class Btree {
 private:
-	const char* path;
+	string path;
 	int kBuf;
 	int bufS;
 	rocksdb::DB* db;
 public:
 	Btree();
-	Btree(const char* path, int bufferSize);
+	Btree(string path, int bufferSize, bool onlySearch=false);
+
+//	~Btree();
 
 	bool AddData(const string& key, const string& value, bool com=false);
 
 	bool Close();
 
 	void SetKBuf(int bufs);
+
+	string GetPath();
 
 	map<string, string> GetData(const string& start, const string& end);
 

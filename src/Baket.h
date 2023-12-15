@@ -5,14 +5,15 @@
 #include <cstdint>
 #include <iostream>
 #include <nlohmann/json.hpp>
+#include <mutex>
 #include <unordered_map>
 #include <memory>
 #include <rocksdb/db.h>
 #include <string>
 #include "Action.h"
-#include "BackIndexRock.h"
+#include "BackIndexRock2.h"
 #include <vector>
-using json = nlohmann::json;
+//using json = nlohmann::json;
 
 
 
@@ -22,6 +23,8 @@ public:
 	uint64_t end_time; // Included
 	std::string hash; // The identifier
 	string path;
+	string index;
+	std::mutex mutex_;
 	rocksdb::DB* db; // DB to save all actions
 	rocksdb::DB* dbWords; // DB to save info about backIndexes
 	uint64_t timeOut;
@@ -30,11 +33,12 @@ private:
 	bool AddWordInfo(const std::string word, const std::string hash);
 	uint64_t GetHash(const uint64_t * data, int len, uint64_t seed);
 	bool AddActionInAllActions(Action& action);
-	bool AddJSON(const json& json_obj, const string& UUid, const std::string& prefix);
+	bool AddJSON(const nlohmann::json& json_obj, const string& UUid, const std::string& prefix);
 public:
 	Baket();
-	Baket(std::string hash);
-	Baket(uint64_t curTime, uint64_t timeOut_);
+	~Baket();
+	Baket(std::string hash, std::string index);
+	Baket(uint64_t curTime, uint64_t timeOut_, string index_);
 	bool Add(Action& action, bool com);
 	bool Add(std::vector<Action>& actions);
 	std::string GetBIbyKEYword(const std::string Kword);

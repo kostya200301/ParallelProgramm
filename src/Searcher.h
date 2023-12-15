@@ -12,11 +12,13 @@ private:
 //	vector<string> GetBakets()
 	Request req;
 	map<string, string> GetBakets();
-	Btree treeBakets;
+	Btree* treeBakets;
+	string index;
 public:
 	Searcher();
 	Searcher(Request& r);
 	void PrintAll(const std::string& dir);
+	string GetJsonString();
 
 };
 

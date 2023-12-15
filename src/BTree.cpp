@@ -1,35 +1,64 @@
+#include <filesystem>
 
+
+namespace fs = std::filesystem;
 
 
 #include "BTree.h"
 
 Btree::Btree() {
-        this->path = "./tree";
-        this->kBuf = 0;
-        this->bufS = 1;
-	std::string db_path = "./Info";
-        rocksdb::Options options;
-        options.create_if_missing = true;
-        rocksdb::Status status = rocksdb::DB::Open(options, db_path, &db);
-        if (!status.ok()) {
-                std::cerr << "Unable to open database: " << status.ToString() << std::endl;
-        }
-
+        this->path = ".";
 }
 
 
-Btree::Btree(const char* path_, int bufferSize) {
+Btree::Btree(string  path_, int bufferSize, bool onlySearch) {
+	cout << "OPEN: " << path_ << endl;
 	this->path = path_;
 	this->kBuf = 0;
 	this->bufS = bufferSize;
-        rocksdb::Options options;
-        options.create_if_missing = true;
-        rocksdb::Status status = rocksdb::DB::Open(options, path_, &db);
-        if (!status.ok()) {
-                std::cerr << "Unable to open database: " << status.ToString() << std::endl;
+
+
+
+	 if (!fs::exists(path_)) { // Проверяем, существует ли уже папка
+                if (fs::create_directories(path_)) { // Создаем папку и вложенные подпапки (если нужно)
+//                      std::cout << "Folder created successfully." << std::endl;
+                } else {
+                        std::cerr << "Failed to create folder." << std::endl;
+                }
+        } else {
+                std::cout << "Folder already exists." << std::endl;
         }
 
+	if (!onlySearch) {
+        	rocksdb::Options options;
+        	options.create_if_missing = true;
+        	rocksdb::Status status = rocksdb::DB::Open(options, path_, &db);
+        	if (!status.ok()) {
+        	        std::cerr << "Unable to open BTREE database: " << status.ToString() << std::endl;
+        	}
+		cout << "Connection BTREE OPEN\n";
+	} else {
+        	rocksdb::Options options;
+        	options.create_if_missing = true;
+        	rocksdb::Status status = rocksdb::DB::OpenForReadOnly(options, path_, &db);
+        	if (!status.ok()) {
+        	        std::cerr << "Unable to open BTREE database: " << status.ToString() << std::endl;
+        	}
+		cout << "Connection BTREE ONLYSEARCH OPEN\n";
+
+	}
 }
+
+
+/*Btree::~Btree() {
+	if (db != nullptr) {
+ 	   //db->Close();
+ 	   delete db;
+	}
+	std::cout << "Dest Btree done\n";
+
+}
+*/
 
 bool Btree::AddData(const string& key, const string& value, bool com) {
 	this->db->Put(rocksdb::WriteOptions(), key, value);
@@ -45,13 +74,37 @@ void Btree::PrintAll() {
 }
 
 bool Btree::Close() {
+	cout << "Close: " << path << endl;
+	delete db;
 	// Add Close db
 	return true;
 }
 
+string Btree::GetPath() {
+	return this->path;
+}
 
 
 map<string, string> Btree::GetData(const string& start, const string& end) {
+
+    map<string, string> answer;
+
+    rocksdb::ReadOptions read_options;
+
+    // Используем итератор с автоматическим удалением (C++11 и новее)
+    {
+        std::unique_ptr<rocksdb::Iterator> it(db->NewIterator(read_options));
+
+        for (it->Seek(start); it->Valid() && it->key().ToString() <= end; it->Next()) {
+            std::string keyStr = it->key().ToString();
+            std::string valueStr = it->value().ToString();
+            answer[keyStr] = valueStr;
+        }
+    }
+	return answer;
+
+/*
+
 	map<string, string> answer;
 	rocksdb::ReadOptions read_options;
 	rocksdb::Iterator* it = db->NewIterator(read_options);
@@ -62,6 +115,10 @@ map<string, string> Btree::GetData(const string& start, const string& end) {
 	}
 //	std::cout << "Iterator: " << it->key().ToString() << std::endl;
 	return answer;
+
+*/
+
+
 
 /*	map<string, string> answer;
 

@@ -46,13 +46,13 @@ uint64_t Baket::GetHash(const uint64_t * data, int len, uint64_t seed) {
 Baket::Baket() {this->start_time = 1; this->end_time = 1;}
 
 
-Baket::Baket(std::string BID, std::string index) {
+Baket::Baket(std::string BID) {
 	// Make only read
-	std::string db_path = "data/" + index  + "/" + BID.substr(0, 3) + "/" + BID.substr(3, 3) + "/" + BID;
+	std::string db_path = "data/index/" + BID.substr(0, 3) + "/" + BID.substr(3, 3) + "/" + BID;
 	this->path = db_path;
 	std::string db_path_actions = this->path + "/Actions";
 	std::string db_path_info = this->path + "/Info";
-//	cout << db_path_actions << endl << db_path_info << endl;
+	cout << db_path_actions << endl << db_path_info << endl;
 	rocksdb::Options options;
 	options.create_if_missing = true;
 	rocksdb::Status status = rocksdb::DB::OpenForReadOnly(options, db_path_actions, &db);
@@ -66,12 +66,6 @@ Baket::Baket(std::string BID, std::string index) {
 	}
 }
 
-Baket::~Baket() {
-	cout << "Rem Baket\n";
-	delete db;
-	delete dbWords;
-}
-
 string Baket::GetBIbyKEYword(const string Kword) {
 	rocksdb::ReadOptions read_options;
 	string value;
@@ -80,6 +74,7 @@ string Baket::GetBIbyKEYword(const string Kword) {
 	if (read_status.ok()) {
 		return value;
 	} else {
+		std::cout << "Error read\n";
 		throw "Error read\n";
 	}
 }
@@ -98,14 +93,13 @@ string Baket::GetBIbyKEYword(const string Kword) {
 
 
 
-Baket::Baket(uint64_t curTime, uint64_t timeOut_, string index_) {
-	this->index = index_;
+Baket::Baket(uint64_t curTime, uint64_t timeOut_) {
 	this->start_time = curTime;
 	this->end_time = curTime + timeOut_;
 	this->timeOut = timeOut_;
 	this->hash = std::to_string(this->GetHash(&curTime, 8, 0));
 
-	std::string directoryPath = "data/" + this->index + "/" +  this->hash.substr(0, 3) + "/" + this->hash.substr(3, 3) + "/" + this->hash;
+	std::string directoryPath = "data/index/" + this->hash.substr(0, 3) + "/" + this->hash.substr(3, 3) + "/" + this->hash;
 	this->path = directoryPath;
 
 	// Создаем директорию
@@ -180,11 +174,9 @@ bool Baket::AddJSON(const json& json_obj, const string& UUid, const std::string&
 			} else {
 				// Если элемент является простым значением, выводим его
 				//std::cout << prefix + it.key() << " : " << it.value() << std::endl;
-				mutex_.lock();
 				auto itBI = this->backIndexes.find(prefix + it.key());
 	                        if (itBI != this->backIndexes.end()) {
 	                                //for (auto word : p.second) {
-						mutex_.unlock();
 	                                        itBI->second->Add(to_string(it.value()), UUid, 1);
 	                                //}
 	                        }
@@ -195,7 +187,6 @@ bool Baket::AddJSON(const json& json_obj, const string& UUid, const std::string&
                 	                AddWordInfo(prefix + it.key(), BIPtr->hash);
 
                         	        //for (auto word : p.second) {
-						 mutex_.unlock();
                         	                this->backIndexes[prefix + it.key()]->Add(to_string(it.value()), UUid, 1);
                         	        //}
                        		 }
@@ -210,11 +201,9 @@ bool Baket::AddJSON(const json& json_obj, const string& UUid, const std::string&
             } else {
                 // Если элемент массива является простым значением, выводим его
                 //std::cout << prefix + "[" + std::to_string(i) + "]" << " : " << json_obj[i] << std::>
-		mutex_.lock();
 		auto itBI = this->backIndexes.find(prefix);
                 if (itBI != this->backIndexes.end()) {
                 	//for (auto word : p.second) {
-			mutex_.unlock();
                         itBI->second->Add(to_string(json_obj[i]), UUid, 1);
                         //}
                 }
@@ -224,7 +213,6 @@ bool Baket::AddJSON(const json& json_obj, const string& UUid, const std::string&
                         AddWordInfo(prefix, BIPtr->hash);
 
                         //for (auto word : p.second) {
-				mutex_.unlock();
              		           this->backIndexes[prefix]->Add(to_string(json_obj[i]), UUid, 1);
                         //}
                }
@@ -237,7 +225,7 @@ bool Baket::AddJSON(const json& json_obj, const string& UUid, const std::string&
 
 bool Baket::Add(Action& action, bool com) {
 	AddActionInAllActions(action);
-//	cout << "MADE: " << action.json << endl;
+
 	AddJSON(action.json, action.uuid);
 
 

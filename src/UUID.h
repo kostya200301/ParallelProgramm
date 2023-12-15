@@ -6,6 +6,7 @@ class UUID {
 private:
 	static std::string generateUUID() {
 		if (sodium_init() < 0) {
+			std::cout <<  "libsodium initialization failed.\n";
 			throw  "libsodium initialization failed.";
 		}
 		constexpr size_t UUID_SIZE = 16;

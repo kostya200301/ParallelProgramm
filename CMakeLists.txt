@@ -8,7 +8,9 @@ set(CMAKE_CXX_STANDARD 17)
 
 # Укажите исходные файлы вашего проекта
 set(SOURCES
-    src/BackIndexRock.cpp
+    src/BackIndexRock2.cpp
+#    src/BackIndexRock.cpp
+    src/RestServer.cpp
     src/main.cpp
     src/Baket.cpp
     src/BTree.cpp
@@ -72,6 +74,9 @@ target_link_libraries(YourExecutableName
     ${ROCKSDB_LIBRARIES}/librocksdb.a  # Замените на фактический путь и имя библиотеки
     Threads::Threads
     sodium
+    cpprest
+    ssl
+    crypto
 #    nlohmann_json
 #    gflags
 )
